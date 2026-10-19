@@ -58,7 +58,13 @@ public class MeiaEntrada extends Ingresso {
 	 */
 	@Override 
 	public double valorIngresso() {
-		//TODO
-		return  0;
+		double entrada = VALOR_ENTRADA * DESCONTO_MEIA;
+		double totalAdicionais = 0;
+		if (adicionais.size() > 0){
+			for (EAdicional adicional : adicionais){
+				totalAdicionais += adicional.valor();
+			}
+		}
+		return  totalAdicionais + entrada;
 	}
 }

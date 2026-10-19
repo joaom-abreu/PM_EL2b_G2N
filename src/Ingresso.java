@@ -59,7 +59,7 @@ public abstract class Ingresso {
 	/**
 	 * Lista de adicionais vinculados ao ingresso.
 	 */
-	private List<EAdicional> adicionais;
+	protected List<EAdicional> adicionais;
 
 	/**
 	 * Constrói um ingresso com filme e sessão.
@@ -118,7 +118,7 @@ public abstract class Ingresso {
 	 */
 	@Override 
 	public String toString() {
-		//TODO
-		return "";
+		String resposta = String.format("Filme: %s\nData: %s\nValor da entrada: %d", filme, sessao, valorIngresso());
+		return resposta;
 	}
 }
